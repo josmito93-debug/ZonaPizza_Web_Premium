@@ -1,0 +1,3 @@
+Abre ZonaPizza_Web_Autocontenida_Exacta.html en Chrome, Edge o Safari.
+La web incluye las fotos, el menú completo, carrito, upsells y envío del pedido por WhatsApp.
+Para fijar el WhatsApp del restaurante, agrega el número en config.js dentro del ZIP completo.
