@@ -1,0 +1,6 @@
+const CACHE='zonapizza-web-v1';
+const ASSETS=['./','index.html','styles.css','config.js','app.js','manifest.webmanifest',
+'assets/logo.svg','assets/logo-crop.png','assets/icon-192.png','assets/icon-512.png','assets/hero-pizza.jpg','assets/red-plate-pizza.jpg','assets/prosciutto-pizza.jpg','assets/basil-pizza.jpg','assets/pasta-white-sauce.jpg','assets/burrata-pasta.jpg','assets/pasticho-table.jpg','assets/lemon-drink.jpg','assets/baked-cutlet.jpg','assets/margherita-pizza.jpg','assets/event-ambience.jpg','assets/menu-pizzas.jpg','assets/menu-pastas.jpg','assets/menu-specials.jpg','assets/menu-entradas.jpg','assets/menu-extras.jpg','assets/menu-bebidas.jpg','assets/brand-cover.jpg'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));});

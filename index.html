@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zona Pizza | Web Premium</title>
+  <meta name="description" content="Zona Pizza · auténtica cocina italiana en San Cristóbal. Pizzas, pastas, platos especiales y delivery por WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <div class="leaf leaf-a"></div>
+  <div class="leaf leaf-b"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Zona Pizza inicio">
+        <img src="assets/logo.svg" alt="Zona Pizza" />
+      </a>
+      <nav class="main-nav">
+        <a href="#menu">Menú</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav-order" data-open-cart>
+        Pedir ahora <span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#menu">Menú</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Auténtica cocina italiana · San Cristóbal</p>
+          <h1>Una web <span>más premium</span> para un restaurante con sabor, estilo y personalidad.</h1>
+          <p class="hero-text">Zona Pizza combina pizzas artesanales, pastas, platos italianos y delivery en una experiencia visual elegante, cálida y totalmente optimizada para vender por WhatsApp.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Ver menú</a>
+            <button class="btn btn-secondary" data-open-cart>Ordenar ahora</button>
+          </div>
+          <div class="hero-pills">
+            <span>📍 Barrio Obrero, calle 12 entre cra 23 y 24</span>
+            <span>🕛 Lunes a lunes · 12pm a 11pm</span>
+            <span>🛵 Tenemos delivery</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-card hero-main-card">
+            <img src="assets/hero-pizza.jpg" alt="Pizza artesanal de Zona Pizza" />
+          </div>
+          <div class="hero-stack">
+            <div class="hero-card small"><img src="assets/red-plate-pizza.jpg" alt="Pizza servida en plato rojo" /></div>
+            <div class="hero-card small"><img src="assets/pasta-white-sauce.jpg" alt="Pasta cremosa" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container highlight-grid">
+        <article><strong>Ambiente visual propio</strong><span>Paleta elegante vino, marfil y negro inspirada en la identidad del restaurante.</span></article>
+        <article><strong>Carrito con upsells</strong><span>Recomendaciones automáticas de bebida, postre y entradas para subir el ticket.</span></article>
+        <article><strong>Pedido estructurado</strong><span>La orden sale limpia y organizada directo a WhatsApp.</span></article>
+        <article><strong>Mobile first</strong><span>Navegación fluida, premium y amigable desde el celular.</span></article>
+      </div>
+    </section>
+
+    <section class="signature" id="experiencia">
+      <div class="container signature-grid">
+        <div class="signature-copy">
+          <p class="eyebrow">Diseño premium personalizado</p>
+          <h2>Inspirado en la línea gráfica real de <span>Zona Pizza</span></h2>
+          <p>Tomamos como base el menú, el logo, los tonos vino y el estilo de sus publicaciones para construir una experiencia más refinada. La web mezcla elegancia italiana, calidez gastronómica y una estructura pensada para convertir visitas en pedidos.</p>
+          <ul class="signature-list">
+            <li>✔ menú completo con todas las categorías</li>
+            <li>✔ pizzas con tamaños y adicionales</li>
+            <li>✔ pastas con selección de tipo y opción sin gluten</li>
+            <li>✔ delivery / take out con datos del cliente</li>
+          </ul>
+        </div>
+        <div class="signature-gallery">
+          <div class="gallery-tile tall"><img src="assets/prosciutto-pizza.jpg" alt="Pizza premium de prosciutto" /></div>
+          <div class="gallery-tile"><img src="assets/burrata-pasta.jpg" alt="Pasta con burrata" /></div>
+          <div class="gallery-tile"><img src="assets/pasticho-table.jpg" alt="Pasticho al horno" /></div>
+          <div class="gallery-tile wide"><img src="assets/baked-cutlet.jpg" alt="Plato especial al horno" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Carta completa</p>
+          <h2>Explora el menú y arma tu pedido</h2>
+          <p class="section-subtext">Cada producto fue organizado y preparado para pedido online con carrito, extras y upsells.</p>
+        </div>
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div id="menuContent" class="menu-content"></div>
+      </div>
+    </section>
+
+    <section class="story-strip">
+      <div class="container strip-grid">
+        <div class="strip-card big">
+          <img src="assets/margherita-pizza.jpg" alt="Pizza margherita" />
+          <div class="strip-copy">
+            <p class="eyebrow">Favorita del público</p>
+            <h3>Pizzas artesanales con personalidad propia</h3>
+            <p>Desde Margarita y Capresa hasta combinaciones premium como Prosciutto e Burratta o Marea Alta.</p>
+          </div>
+        </div>
+        <div class="strip-card small-card accent">
+          <h4>Upsell sugerido</h4>
+          <p>Agrega <strong>Tiramisu</strong> o una <strong>Soda Italiana</strong> al final de tu pedido.</p>
+        </div>
+        <div class="strip-card small-card">
+          <h4>Take Out o Delivery</h4>
+          <p>Selecciona cómo quieres recibir tu pedido y envíalo directo por WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="original-menu" id="galeria">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Material de referencia</p>
+          <h2>Menú original del restaurante</h2>
+          <p class="section-subtext">También dejamos visible el arte original del menú para conservar la esencia de la marca.</p>
+        </div>
+        <div class="menu-art-grid">
+          <button class="menu-art-card" data-lightbox="assets/menu-entradas.jpg"><img src="assets/menu-entradas.jpg" alt="Menú entradas y ensaladas" /><span>Entradas y ensaladas</span></button>
+          <button class="menu-art-card" data-lightbox="assets/menu-specials.jpg"><img src="assets/menu-specials.jpg" alt="Menú platos especiales" /><span>Platos especiales</span></button>
+          <button class="menu-art-card" data-lightbox="assets/menu-pastas.jpg"><img src="assets/menu-pastas.jpg" alt="Menú pastas" /><span>Pastas</span></button>
+          <button class="menu-art-card" data-lightbox="assets/menu-pizzas.jpg"><img src="assets/menu-pizzas.jpg" alt="Menú pizzas" /><span>Pizzas</span></button>
+          <button class="menu-art-card" data-lightbox="assets/menu-bebidas.jpg"><img src="assets/menu-bebidas.jpg" alt="Menú bebidas y postres" /><span>Bebidas y postres</span></button>
+          <button class="menu-art-card" data-lightbox="assets/menu-extras.jpg"><img src="assets/menu-extras.jpg" alt="Menú adicionales" /><span>Adicionales</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-card brand-card">
+          <img src="assets/logo.svg" alt="Zona Pizza" class="footer-logo" />
+          <p>Auténtica comida italiana en San Cristóbal, Táchira.</p>
+          <div class="contact-lines">
+            <span>📍 Barrio Obrero, calle 12 entre cra 23 y 24</span>
+            <span>🕛 Lunes a lunes · 12pm - 11pm</span>
+            <span>🛵 Delivery disponible</span>
+          </div>
+        </div>
+        <div class="contact-card cta-card">
+          <p class="eyebrow">Listo para vender</p>
+          <h3>¿Quieres pedir ahora?</h3>
+          <p>Agrega productos al carrito, selecciona delivery o take out y envía tu pedido organizado por WhatsApp.</p>
+          <button class="btn btn-primary" data-open-cart>Ir al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Tu pedido</p>
+        <h3>Carrito</h3>
+      </div>
+      <button class="close-cart" id="closeCart">✕</button>
+    </div>
+    <div class="cart-body">
+      <div id="cartItems" class="cart-items"></div>
+      <div class="upsell-box">
+        <p class="upsell-title">Te puede interesar</p>
+        <div id="upsellList" class="upsell-list"></div>
+      </div>
+      <div class="order-form">
+        <label>Nombre<input type="text" id="customerName" placeholder="Tu nombre" /></label>
+        <label>Teléfono<input type="text" id="customerPhone" placeholder="Tu teléfono" /></label>
+        <label>Tipo de pedido
+          <select id="orderType">
+            <option value="Delivery">Delivery</option>
+            <option value="Take out">Take out</option>
+          </select>
+        </label>
+        <label>Dirección / punto de referencia<textarea id="customerAddress" rows="3" placeholder="Dirección o instrucciones del pedido"></textarea></label>
+        <label>Notas adicionales<textarea id="customerNotes" rows="2" placeholder="Notas extra"></textarea></label>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="totals"><span>Total</span><strong id="cartTotal">€0.00</strong></div>
+      <button class="btn btn-primary btn-full" id="sendWhatsApp">Enviar pedido por WhatsApp</button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <dialog id="productModal" class="product-modal">
+    <form method="dialog" class="product-modal-card" id="productForm">
+      <button class="modal-close" value="cancel">✕</button>
+      <div class="product-modal-grid">
+        <div class="product-modal-image"><img id="modalImage" src="" alt="Producto" /></div>
+        <div class="product-modal-info">
+          <p class="eyebrow" id="modalCategory"></p>
+          <h3 id="modalName"></h3>
+          <p class="modal-desc" id="modalDescription"></p>
+          <div id="sizeOptions" class="option-block"></div>
+          <div id="extraOptions" class="option-block"></div>
+          <div id="addonOptions" class="option-block"></div>
+          <div class="modal-total">Precio: <strong id="modalPrice"></strong></div>
+          <button type="button" class="btn btn-primary" id="addToCartBtn">Agregar al carrito</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="lightbox" class="lightbox">
+    <form method="dialog" class="lightbox-card">
+      <button class="modal-close" value="cancel">✕</button>
+      <img id="lightboxImage" src="" alt="Vista ampliada" />
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
